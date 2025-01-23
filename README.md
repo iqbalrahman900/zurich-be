@@ -125,3 +125,20 @@ For admin-protected endpoints (POST/PUT/DELETE), use the Authorize button:
  "location": "West Malaysia",
  "price": 300
 }
+
+### Endpoints
+- **GET /product** - Get product price
+ - Query params: productCode, location
+ - Public access
+ - Example: `/product?productCode=1000&location=West%20Malaysia`
+
+- **POST /product** - Create product
+ - Requires admin role
+ - Request body:
+ ```json
+ {
+   "productCode": "1000",
+   "productDescription": "Sedan",
+   "location": "West Malaysia", 
+   "price": 300
+ }
