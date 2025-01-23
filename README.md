@@ -97,3 +97,31 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+
+
+## Swagger Documentation
+
+### Access Swagger UI
+https://3.107.6.149.nip.io/api
+
+### Authorization
+For admin-protected endpoints (POST/PUT/DELETE), use the Authorize button:
+- Click "Authorize" 
+- Enter "admin" in x-user-role
+- Click "Authorize"
+
+### Endpoints
+- GET /product - Public access
+- POST /product - Admin only 
+- PUT /product - Admin only
+- DELETE /product - Admin only
+
+### Sample Requests
+```json
+// POST /product (Admin)
+{
+ "productCode": "1000",
+ "productDescription": "Sedan",
+ "location": "West Malaysia",
+ "price": 300
+}
